@@ -1,0 +1,167 @@
+\begin{thebibliography}{25}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{\discretionary{}{}{}https://doi.org/#1}\else
+  \providecommand{\doi}[1]{\discretionary{}{}{}\urlstyle{rm}\url{https://doi.org/#1}}\fi
+
+\bibitem[{Zaghari et~al.(2017)Zaghari, Weddell, White, Bashir, Harvey, and
+  Wang}]{Zaghari2017}
+Zaghari, B., Weddell, A., White, N., Bashir, I., Harvey, T.~J., and Wang, L.,
+  \enquote{{Integrated smart bearings for next generation aero-engines. Part
+  II: Energy harvesting and wireless communication Development},} \emph{WCCM
+  2017 - 1st World Congr. Cond. Monit. 2017}, 2017.
+
+\bibitem[{Zhang et~al.(2019)Zhang, Chen, and Wang}]{zhang2019number}
+Zhang, X., Chen, X., and Wang, J., \enquote{A number-based inventory of
+  size-resolved black carbon particle emissions by global civil aviation,}
+  \emph{Nature communications}, Vol.~10, No.~1, 2019, p. 534.
+
+\bibitem[{Zaghari et~al.(2020)Zaghari, Weddell, Esmaeili, Bashir, Harvey,
+  White, Mirring, and Wang}]{Zaghari2020}
+Zaghari, B., Weddell, A.~S., Esmaeili, K., Bashir, I., Harvey, T.~J., White,
+  N.~M., Mirring, P., and Wang, L., \enquote{{High temperature self-powered
+  sensing system for a smart bearing in an aircraft jet engine},} \emph{IEEE
+  Trans. Instrum. Meas.}, 2020, pp. 1--1.
+\newblock \doi{10.1109/tim.2020.2971288}.
+
+\bibitem[{Kerr and Ivey(2002)}]{Kerr2002}
+Kerr, C., and Ivey, P., \enquote{{An overview of the measurement errors
+  associated with gas turbine aeroengine pyrometer systems},} \emph{Meas. Sci.
+  Technol.}, Vol.~13, No.~6, 2002, pp. 873--881.
+\newblock \doi{10.1088/0957-0233/13/6/307}.
+
+\bibitem[{Becker et~al.(1994)Becker, Roby, O'Brien, and Bensing}]{Becker1994}
+Becker, W.~J., Roby, R.~J., O'Brien, W.~F., and Bensing, G.~K.,
+  \enquote{{Dynamic turbine blade temperature measurements},} \emph{J. Propuls.
+  Power}, Vol.~10, No.~1, 1994, pp. 69--78.
+\newblock \doi{10.2514/3.23713}.
+
+\bibitem[{Zhou(2016)}]{Zhou2016}
+Zhou, W., \enquote{{Novel cooling strategies for improved protection of gas
+  turbine blades},} \emph{Grad. Theses Diss.}, 2016.
+\newblock \urlprefix\url{https://lib.dr.iastate.edu/etd/15167}.
+
+\bibitem[{Heyes(2004)}]{Heyes2004}
+Heyes, A.~L., \emph{{Thermographic Phosphor thermometry for gas turbines}}, Von
+  Karmen Institute for fluid dynamics, 2004.
+
+\bibitem[{Thakare et~al.(2020)Thakare, Pandey, Mahapatra, and
+  Mulik}]{Thakare2020}
+Thakare, J.~G., Pandey, C., Mahapatra, M.~M., and Mulik, R.~S.,
+  \enquote{{Thermal barrier coatings - A state of the art review},} \emph{Met.
+  Mater. Int.}, Vol.~1, No. March, 2020.
+\newblock \doi{10.1007/s12540-020-00705-w},
+  \urlprefix\url{https://doi.org/10.1007/s12540-020-00705-w}.
+
+\bibitem[{Feist(2001)}]{Feist2001}
+Feist, J.~P., \enquote{{Development of phosphor thermometry for gas turbines},}
+  Ph.D. thesis, University of London, 2001.
+
+\bibitem[{Dixon and Hall(2013)}]{Dixon2013}
+Dixon, S.~L., and Hall, C.~A., \emph{{Fluid mechanics and thermodynamics of
+  turbomachinery, 7th edition}}, Elsevier, 2013.
+\newblock \doi{10.1016/C2011-0-05059-7}.
+
+\bibitem[{Yang and Li(2015)}]{Yang2015}
+Yang, L., and Li, Z.~M., \enquote{{The research of temperature indicating
+  paints and its application in aero-engine temperature measurement},}
+  \emph{Procedia Eng.}, Vol.~99, 2015, pp. 1152--1157.
+\newblock \doi{10.1016/j.proeng.2014.12.697},
+  \urlprefix\url{http://dx.doi.org/10.1016/j.proeng.2014.12.697}.
+
+\bibitem[{Feist et~al.(2011)Feist, Nicholls, and Heyes}]{Feist2011}
+Feist, Nicholls, and Heyes, \enquote{{(12) Patent Application Publication (10)
+  Pub. No.: US 2011/0069735 A1},} , 2011.
+
+\bibitem[{Duan et~al.(2020)Duan, Xie, Ji, and Weng}]{Duan2020}
+Duan, F.~L., Xie, Z., Ji, Z., and Weng, H., \enquote{{Robust thin-film
+  temperature sensors embedded on nozzle guide vane surface},} \emph{AIAA J.},
+  2020, pp. 1--5.
+\newblock \doi{10.2514/1.J058854}.
+
+\bibitem[{Maurer et~al.(2008)Maurer, Lindlein, Willsch, Bosselmann, and
+  Baumgart}]{Maurer2008}
+Maurer, S., Lindlein, N., Willsch, M., Bosselmann, T., and Baumgart, A.,
+  \enquote{{Design of a Multiple Beam Pyrometer for Measurement of Temperature
+  on Gas Turbine Blades},} \emph{7th IEEE Conf. Sensors}, 2008, pp. 744--747.
+
+\bibitem[{Willsch et~al.(2015)Willsch, Bosselmann, Pearce, and
+  Howes}]{Willsch2015}
+Willsch, M., Bosselmann, T., Pearce, R.~E., and Howes, T.~M., \enquote{{Non
+  Intrusive 8 channel beam pyrometer for gas turbine blade temperature
+  monitoring},} \emph{7th EVI-GTI Gas Turbine Instrum. Conf. London, 3 - 5
+  Novemb. 2015}, 2015, p.~5.
+
+\bibitem[{Feist et~al.(2013)Feist, Sollazzo, Berthier, Charnley, and
+  Wells}]{Feist2013}
+Feist, J.~P., Sollazzo, P.~Y., Berthier, S., Charnley, B., and Wells, J.,
+  \enquote{{Application of an industrial sensor coating system on a rolls-royce
+  jet engine for temperature detection},} \emph{J. Eng. Gas Turbines Power},
+  Vol. 135, No.~1, 2013, pp. 1--9.
+\newblock \doi{10.1115/1.4007370}.
+
+\bibitem[{Mitra and Gopalakrishnan(2016)}]{Mitra2016}
+Mitra, M., and Gopalakrishnan, S., \enquote{{Guided wave based structural
+  health monitoring: A review},} \emph{Smart Mater. Struct.}, Vol.~25, No.~5,
+  2016.
+\newblock \doi{10.1088/0964-1726/25/5/053001}.
+
+\bibitem[{Zaghari et~al.(2013)Zaghari, Humphrey, and
+  Moshrefi-Torbati}]{Zaghari2013}
+Zaghari, B., Humphrey, V., and Moshrefi-Torbati, M., \enquote{{Dispersion
+  behavior of torsional guided waves in a small diameter steel gas pipe},}
+  \emph{ICAC 2013 - Proc. 19th Int. Conf. Autom. Comput. Futur. Energy Autom.},
+  Vol.~1, No. September, 2013, pp. 37--42.
+
+\bibitem[{Shi et~al.(2019)Shi, Zhuang, Xu, Yu, and Zhu}]{Shi2019}
+Shi, H., Zhuang, L., Xu, X., Yu, Z., and Zhu, L., \enquote{{An ultrasonic
+  guided wave mode selection and excitation method in rail defect detection},}
+  \emph{Appl. Sci.}, Vol.~9, No.~6, 2019.
+\newblock \doi{10.3390/app9061170}.
+
+\bibitem[{Wang et~al.(2019)Wang, Qiu, Luo, and Ding}]{Wang2019}
+Wang, Y., Qiu, L., Luo, Y., and Ding, R., \enquote{{A stretchable and
+  large-scale guided wave sensor network for aircraft smart skin of structural
+  health monitoring},} \emph{Struct. Heal. Monit.}, 2019.
+\newblock \doi{10.1177/1475921719850641}.
+
+\bibitem[{Dransfeld and Salzmann(1970)}]{Dransfeld1970}
+Dransfeld, K., and Salzmann, E., \emph{{Excitation, Detection, and Attenuation
+  of High-Frequency Elastic Surface Waves}}, Vol.~7, ACADEMIC PRESS, INC.,
+  1970.
+\newblock \doi{10.1016/B978-0-12-395667-5.50010-6},
+  \urlprefix\url{http://dx.doi.org/10.1016/B978-0-12-395667-5.50010-6}.
+
+\bibitem[{Yule et~al.(2021)Yule, Zaghari, Harris, and Hill}]{Yule2021}
+Yule, L., Zaghari, B., Harris, N., and Hill, M., \enquote{{Surface temperature
+  condition monitoring methods for aerospace turbomachinery: exploring the use
+  of ultrasonic guided waves},} \emph{Meas. Sci. Technol.}, 2021.
+\newblock \doi{10.1088/1361-6501/abda96},
+  \urlprefix\url{https://iopscience.iop.org/article/10.1088/1361-6501/abda96
+  https://iopscience.iop.org/article/10.1088/1361-6501/abda96/meta}.
+
+\bibitem[{Huber(2020)}]{Huber}
+Huber, A., \enquote{{The Dispersion Calculator},} , 2020.
+\newblock
+  \urlprefix\url{https://www.dlr.de/zlp/en/desktopdefault.aspx/tabid-14332/24874{\_}read-61142/{\#}/gallery/33485}.
+
+\bibitem[{Hopkins et~al.(2012)Hopkins, Baltis, Pitaress, and
+  Hazelmyer}]{Hopkins2012}
+Hopkins, D.~C., Baltis, T., Pitaress, J.~M., and Hazelmyer, D.~R.,
+  \enquote{{Extreme thermal transient stress analysis with pre-stress in a
+  metal matrix composite power package},} \emph{Proc. - IMAPS Int. Conf. Exhib.
+  High Temp. Electron. HiTEC 2012}, , No. February 2016, 2012, pp. 361--372.
+\newblock \doi{10.4071/HITEC-2012-THA25}.
+
+\bibitem[{Croxford et~al.(2007)Croxford, Wilcox, Drinkwater, and
+  Konstantinidis}]{Croxford2007a}
+Croxford, A.~J., Wilcox, P.~D., Drinkwater, B.~W., and Konstantinidis, G.,
+  \enquote{{Strategies for guided-wave structural health monitoring},}
+  \emph{Proc. R. Soc. A Math. Phys. Eng. Sci.}, Vol. 463, No. 2087, 2007, pp.
+  2961--2981.
+\newblock \doi{10.1098/rspa.2007.0048}.
+
+\end{thebibliography}
