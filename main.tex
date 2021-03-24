@@ -1,0 +1,188 @@
+\documentclass[conf]{new-aiaa}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[version=4]{mhchem}
+\usepackage{siunitx}
+\usepackage{longtable,tabularx}
+\setlength\LTleft{0pt} 
+
+\usepackage{gensymb}
+\usepackage{color,soul}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{amssymb}
+\usepackage{tabu}
+\usepackage{booktabs}
+\usepackage{moreverb,url}
+\usepackage{textcomp}
+\usepackage{siunitx}
+\usepackage{tabularx}
+\usepackage{amsmath}
+
+\author{Lawrence Yule\footnote{PhD Student, Electronics and Computer Science, University of Southampton.}}
+\affil{University of Southampton, Southampton, UK, SO17 1BJ}
+\author {Bahareh Zaghari\footnote{Lecturer in Propulsion Integration, Centre for Propulsion Engineering, Cranfield University}}
+\affil{School of Aerospace, Transport and Manufacturing, Cranfield University, Bedford, UK MK43 0AL}
+\author{Nicholas Harris\footnote{Professor, Electronics and Computer Science, University of Southampton.}}
+\affil{University of Southampton, Southampton, UK, SO17 1BJ}
+\author{Martyn Hill\footnote{Professor of Electromechanical Systems, Engineering and Physical Sciences, University of Southampton.}}
+\affil{University of Southampton, Southampton, UK, SO17 1BJ}
+
+\begin{document}
+
+\title{Towards in-flight temperature monitoring for nozzle guide vanes using ultrasonic guided waves}
+
+\maketitle
+
+\begin{abstract}
+The temperature monitoring of nozzle guide vanes is a challenging task due to the extreme temperatures, gas pressures, and cramped conditions of aero-engines. Ultrasonic guided waves are an attractive method of temperature monitoring as the sensors can be placed outside of the gas path without influencing component operation. In this paper the suitability of using ultrasonic guided waves in the form of the $S_0$ Lamb wave mode is investigated by comparing experimentally measured wave velocity change with temperature against theoretical wave velocity extracted from dispersion curves. Waves are transmitted through an aluminium plate using a pitch-catch wedge transducer configuration, and wave velocity is measured using a cross-correlation function. Temperature is controlled with a hot plate from room temperature to 100\si{\degreeCelsius}, and monitored using thermocouples. Results show that this transducer configuration is capable of monitoring a change in temperature based on a change in wave velocity, showing a good agreement with theoretical predictions, within 4.89 $\pm$ 2.27 m s$^{-1}$ on average. The temperature sensitivity of the system is 1.26--1.78 m s$^{-1}$\si{\degreeCelsius}$^{-1}$ over the range 24\si{\degreeCelsius}--94\si{\degreeCelsius}. This shows the potential for a guided wave based temperature monitoring system, assuming a suitable transducer configuration can be found that is able to operate at higher temperatures. Further investigation will study the possibility of using Piezoelectric Wafer Active Sensors (PWAS) or waveguides for this application. 
+
+\end{abstract}
+
+\section{Nomenclature}
+
+{\renewcommand\arraystretch{1.0}
+\noindent\begin{longtable*}{@{}l @{\quad=\quad} l@{}}
+$t_F$  & Time of flight \\
+$E$  & Young's Modulus \\
+$d$ & Distance \\
+$v$ & Wave velocity \\
+$\alpha$ & Coefficient of thermal expansion \\
+$k$ & Rate of change of wave velocity with temperature \\
+$T$ & Temperature \\
+
+\end{longtable*}}
+\newpage
+\section{Introduction}
+Integrated sensor systems are vital components of aero-engine and propulsion systems, aiding development in the design stage, and allowing for health monitoring once a component is in-service \cite{Zaghari2017}. A small improvement in the design of an aero-engine will result in a sizable reduction in pollution, as well as in fuel and engine costs~\cite{zhang2019number,Zaghari2020}. Temperature monitoring of nozzle guide vanes found in the combustion section of aero-engines is important for maximising the efficiency of the components, as well as ensuring that their thermal limits are not exceeded \cite{Kerr2002}. When turbine inlet temperatures are increased the risk of blade failure from blade creep or oxidation also increases \cite{Becker1994}. Nozzle guide vanes require constant cooling with film cooling techniques embedded into their structure to avoid corrosion and melting \cite{Zhou2016}. The air used for film cooling is drawn from the main gas path, reducing efficiency while increasing NO\textsubscript{X} emissions~\cite{Heyes2004}. As emission limits become stricter the use of film cooling may have to be reduced, emphasising the importance of temperature monitoring to allow components to be operated closer to their thermal limits. Ceramic based thermal barrier coatings (TBCs) are applied to nozzle guide vanes to allow gas stream temperatures to be further increased. These coatings are normally multilayered, utilising yttrium-stabilised-zirconia (YSZ; Y$_2$O$_3$–ZrO$_2$) as the insulating material, a thermally grown oxide layer (TGO), and a bonding layer to attach to the substrate \cite{Thakare2020}. The bonding layer is considered to be the most likely point of failure from exposure to excessively high temperatures \cite{Feist2001}, monitoring of this area is therefore vital for maintaining blade health. 
+
+Monitoring can be achieved using a number of methods however the extreme temperatures (up to 1000\si{\degreeCelsius} using uncooled blades and around 1800\si{\degreeCelsius} with cooled blades~\cite{Dixon2013}), high gas pressures, and cramped conditions of the turbine make the permanent installation and operation of sensors challenging. In the design stage offline temperature monitoring methods are often used to measure the maximum temperature at which the components are exposed to. Thermal paints \cite{Yang2015} and thermal history paints \cite{Feist2011} undergo irreversible physical after exposure to high temperatures that can be analysed after removal from the engine. To monitor the temperature change during start-up, normal operation, and cool-down of an engine, online sensor systems such as thermocouple arrays \cite{Duan2020}, pyrometers \cite{Maurer2008,Willsch2015}, and thermographic phosphors \cite{Feist2013} can be used. These systems have been utilised in test rigs and gas turbines but have not been adapted for use during flight on in-service aero-engines because of space, weight, and power constraints. A sensor system that could be installed and operated on in-service engines, requiring minimal maintenance, would be highly advantageous to aero-engine manufacturers.
+
+Ultrasonic guided wave technology may be suitable in-flight online temperature monitoring as it allows for small sensors, high precision, fast data rates, and can be utilised at frequencies much higher than environmental noise \cite{Mitra2016}. Constructive interference with surfaces/boundaries allows guided waves to travel large distances with limited attenuation, which is already utilised for pipe \cite{Zaghari2013} and rail inspection methods \cite{Shi2019}. Ultrasound has been proposed as a method of defect detection NDE for aircraft \cite{Wang2019}, installing transducers in large arrays to allow for guided wave tomography. Transducers can be kept away from the harsh conditions of the turbine by transmitting a wave through the structure of a blade or vane and analysing the received signal. The influence of the sensor on the operating condition of the component is reduced when the transducers do not have to be installed on the surface, disrupting gas flow.
+
+The geometry of a typical turbine blade or NGV is that of a thin plate like structure through which ultrasonic guided waves will propagate. Rayleigh waves (otherwise known as ``Surface Acoustic Waves" (SAWs)) can be excited at high frequencies (at wavelengths much smaller than material thickness) and are confined to the surface of a material, while Lamb waves (otherwise known as ``Guided Waves") will propagate if excited at frequencies with wavelengths in the order of material thickness, as they interact with both the top and bottom boundaries of a material. Although Rayleigh waves are non-dispersive they produce large surface motions that are highly sensitive to any discontinuities or defects and are highly affected by surface coatings such as TBCs \cite{Dransfeld1970}. Lamb waves will propagate through the multilayered structure of substrate-bonding layer-TBC, where the through-thickness temperature gradient will affect wave propagation, rather than only the temperature at the surface of the TBC. The range of temperature monitoring methods available for online and offline applications are discussed in greater detail by Yule \cite{Yule2021}, along with further discussion on the benefits of ultrasonic guided waves and how a temperature monitoring system can be implemented.
+
+This paper investigates the use of ultrasonic guided waves for temperature monitoring by experimentally validating the theoretical temperature sensitivity of the $S_0$ Lamb wave mode in an aluminium plate using wedge transducers. 
+
+\newpage
+
+\section{Test Method}
+
+To investigate the suitability of a Lamb wave based temperature monitoring system a test system has been developed that measures changes in velocity due to changes in temperature. The results of these experiments are compared to theoretical results for validation. A 1 mm thick aluminium plate has been excited using two 1 MHz piezoelectric transducers attached to variable angle wedges. This frequency-thickness product allows for single mode excitation of the $S_0$ mode. 
+
+\subsection{Theoretical Study}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.7\textwidth]{grouptempshiftalu.eps}
+    \caption{$A_0$, $S_0$, $A_1$, and $S_1$ group velocity dispersion curve shift with temperature from 20\si{\degreeCelsius} to 100\si{\degreeCelsius} for Aluminium 1050 H14.}
+    \label{fig:grouptempshuftalu}
+\end{figure}
+
+Theoretical dispersion curves based on the material properties of Aluminium have been calculated using The Dispersion Calculator \cite{Huber}. Curves have been produced from room temperature (20\si{\degreeCelsius}) up to 100\si{\degreeCelsius} by varying material properties (Figure \ref{fig:grouptempshuftalu}). The change in density (thermal expansion) and poisson’s ratio is negligible in comparison to the change in young’s modulus. Thermal expansion will cause a change in material dimensions which will also affect the wave velocity, but the effect of this is small ($-$1.20 m s$^{-1}$ average change over 20--100\si{\degreeCelsius}). The change in Young’s modulus with temperature in Aluminium is close to linear, as represented by the equation \cite{Hopkins2012}:
+%
+\begin{equation} 
+E\left( T \right) = \  - 4E7 \times T + 8E10\
+\end{equation} 
+%
+Where $T$ is temperature in Kelvin, and $E$ is Young’s modulus in Pascals. 
+The values of Young’s modulus produced by this equation have been used to generate temperature dependant dispersion curves for aluminium (Figure \ref{fig:grouptempshuftalu}). The group velocity of the $S_0$ mode at 1 MHz has been extracted from the curves and is shown along with experimental results in figure \ref{fig:result}. Calculated temperature sensitivity of the mode is 1.68--1.73 m s$^{-1}$\si{\degreeCelsius}$^{-1}$ over the temperature range 20--100\si{\degreeCelsius} (see equation \ref{eqn: eq k}). This value is frequency-thickness product and Lamb wave mode dependent. The temperature sensitivity of the $S_0$ mode increases with temperature, as the mode reduces in frequency (shifts left), and reduces in wave velocity (shifts down). The frequency-thickness product of 1 MHz-mm falls into a more dispersive region.
+\\
+\\
+Time of flight ($t_F$) can be calculated from the equation \cite{Croxford2007a}:
+%
+\begin{equation} \label{tofcalc}
+t_F = \frac{d}{v}
+\end{equation} 
+%
+Where $d$ is the distance travelled at wave velocity $v$ , both of which are functions of temperature, $T$. The sensitivity of the time of flight to temperature can then be expressed as:
+%
+\begin{equation} {\label{eqn: thermal expansion}}
+\delta t_{F} = \frac{d}{v}\left( \alpha - \frac{k}{v} \right) \delta \text{T}
+\end{equation} 
+%
+Where $\alpha$ is the coefficient of thermal expansion of the medium and $k$ is the rate of change of wave velocity with temperature:
+%
+\begin{equation} {\label{eqn: eq k}}
+k = \frac{\delta \text{v}}{\delta \text{T}}
+\end{equation} 
+%
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.8\textwidth]{waveformxcorr.eps}
+    \caption{Time of flight ($t_F$) measurement using cross-correlation function at room temperature.}
+    \label{fig:waveforms}
+\end{figure}
+
+\subsection{Experimental study}
+
+The $S_0$ Lamb wave mode has been excited in an aluminium plate using a piezoelectric transducer attached to an acrylic wedge (Olympus variable angle wedge), which is coupled to the plate with a liquid couplant (Figures \ref{fig:testdiagram} \& \ref{fig:testsetup}). The wedge allows careful selection of excitation angle so that only the $S_0$ mode is excited. The angle is determined based on Snell’s law:
+%
+\begin{equation} 
+\text{Angle}\ \theta = \text{Sin}^{- 1} \left( \frac{\text{Longitudinal\ wedge\ velocity}}{\text{Lamb\ wave\ phase\ velocity}} \right)
+\end{equation} 
+%
+\begin{equation} 
+31{^\circ} = \text{Sin}^{- 1} \left( \frac{2720}{5258} \right)
+\end{equation} 
+%
+The $A_0$ mode cannot be excited using this method as it’s phase velocity at this frequency (2312 m s$^{-1}$) is slower than the longitudinal velocity of the wedge. If the $A_0$ mode is present in the signal it will not affect measurement of the $S_0$ mode as it’s group velocity is significantly different than that of the $S_0$ mode, which will cause a distinct second wave packet. A signal generator (Hewlett Packard 33120A) has been used to generate a 10-cycle tone burst at 1 MHz, which is transmitted through the plate and received by an identical transducer and wedge in a pitch-catch configuration. Time of flight ($t_F$) is measured between transducers using a cross-correlation function. Wave velocity is calculated from the distance between transducers. Based on a sampling rate of 5 $\times$ 10$^8$ the theoretical maximum temporal resolution is 2 ns. This is equal to a velocity resolution of $\pm$ 0.35 m s$^{-1}$. The propagation time through the wedges at each temperature has been subtracted from the total $t_F$ to ensure that only the propagation time through the plate is measured. Wave velocity is calculated using equation \ref{velocitycalc}/\ref{velocitycalcfull}. 
+%
+\begin{equation} \label{velocitycalc}
+v = \frac{d}{t_F}
+\end{equation} 
+%
+\begin{equation} \label{velocitycalcfull}
+v = \left( \frac{d\;\text{between wedges} + d\;\text{wedge foot offset}}{\text{Total}\;t_F - \text{Wedge-to-wedge}\;t_F} \right)
+\end{equation} 
+%
+\\
+Where the $d$ wedge foot offset is 0.0425 m. Measurements have been carried out at multiple temperatures (20\si{\degreeCelsius}--100\si{\degreeCelsius} in $\sim$10\si{\degreeCelsius} increments).
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.8\textwidth]{testdiagramsimple.eps}
+    \caption{Cross-sectional diagram of test setup.}
+    \label{fig:testdiagram}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.8\textwidth]{hjkhh7UmEx.png}
+    \caption{Photograph of test setup.}
+    \label{fig:testsetup}
+\end{figure}
+
+\subsubsection{Test Method}
+
+The temperature of the hot plate is raised to the desired temperature. The temperature of the aluminium plate is monitored using thermocouples. The total $t_F$ is measured until it stabilises. The temperature of the entire system must be allowed to stabilise before taking the measurement to ensure that the temperature of the wedge is the same as the plate. Total $t_F$ is now measured for the set temperature. Multiple measurements are taken after adjusting wedge position. Wedges are removed from the surface and placed together to measure the wedge-to-wedge $t_F$. Multiple measurements are taken after adjusting wedge position. The $t_F$ measurement process is repeated after allowing the total $t_F$ to re-stabilise. Velocity is calculated using equation \ref{velocitycalcfull}. A mean average is calculated from the results of the repeated total $t_F$ measurements, and velocity is calculated for every wedge-to-wedge result. An average velocity is calculated along with standard deviation. Results are shown in figure \ref{fig:result}.
+
+The temperature gradient across the plate has been measured by placing four equally spaced thermocouples along the transmission path, from the centre of the plate to the furthest edge of the wedge transducer in 3 cm increments. The gradient is assumed to be the same on both sides of the plate. The gradient is shown to be almost linear (r$^2$=0.9967) across this distance. An average temperature has been calculated for the total transmission path at each hot plate temperature setting. 
+
+\section{Results}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=.8\textwidth]{aluplatemeasured.eps}
+    \caption{Group velocity change with temperature for the $S_0$ mode in Aluminium 1050 H14.}
+    \label{fig:result}
+\end{figure}
+
+Figure \ref{fig:result} shows experimentally measured wave velocity of the $S_0$ mode plotted against theoretical wave velocity extracted from dispersion curves. Error bars show the standard deviation from the mean. After accounting for the temperature gradient across the transmission path by calculating a temperature average the change in velocity is comparable with predicted velocity extracted from dispersion curves, within 4.89 $\pm$ 2.27 m s$^{-1}$ on average. The temperature sensitivity of the system is 1.26--1.78 m s$^{-1}$\si{\degreeCelsius}$^{-1}$ over the range 24\si{\degreeCelsius}--94\si{\degreeCelsius}. The sensitivity is extracted from a second-order polynomial fit of the data (r$^2$ = 0.9992). The slope away from predicted results (increasing with temperature) can be attributed to the increasing temperature gradient, both in the plate and in the wedges. Increasing temperature is also likely to have an effect on the operation of the piezoelectric transducer (amplitude and centre frequency), however this effect is negligible over the tested temperature range. The wedge angle required to excite the $S_0$ mode will also vary with temperature, however the change is only around 1\si{\degree} between 20\si{\degreeCelsius} and 100\si{\degreeCelsius}.
+
+\section{Experimental sensitivity analysis}
+
+There are a number of experimental error sources to consider. The physical distance between wedges is controlled using 3D printed spacers that keep the wedges aligned at set distances. The movement of the wedges on the surface of the plate increases with temperature as the viscosity of the couplant decreases. Variations in placement cause the calculated velocity to vary by around $\pm$ 5 m s$^{-1}$ across multiple (30) wedge re-alignments. The measurement of wedge-to-wedge time to be subtracted from the total $t_F$ is temperature dependant and relies on accurate alignment of the wedge feet, as well as a good connection between them (signal amplitude is highly dependant on couplant). Variation in alignment causes around a $\pm$ 10 m s$^{-1}$ velocity change. The measurement of the distance from the front edge of the wedge to the point at which the wave enters the plate from the wedge ("wedge foot offset" in equation \ref{velocitycalcfull}) has a large effect on the calculated wave velocity. The exact offset distance is unknown and is assumed to be the point at which the centre line of the transducer aligns with the plate surface. Varying this value (42.5 mm) raises or lowers the velocity of all results considerably ($\pm$ 1 mm = $\pm$ 35 m s$^{-1}$). The hot plate does not heat the test plate evenly, especially at distances greater than 10 cm between wedges where they overhang the edges of the hot plate. The gradient (the difference in temperature between the centre of the plate and the location of the wedges) increases with temperature. The measured velocity is monitoring the average temperature of the transmission path. The gradient has been measured by placing a number (4) of thermocouples along the transmission path, from the centre of the plate (maximum temperature) to the point at which a wave is transmitted between a wedge foot and the plate. The calculation of aluminium dispersion curves at different temperatures is based on a change in Young's modulus. This is predicted from Hopkin's formula \cite{Hopkins2012} that may not give the correct values for Aluminium 1050 H14, but Aluminium in general.
+
+The largest source of error is the measurement of wedge-to-wedge $t_F$, as a small error in alignment causes a large change ($\pm$ 10 m s$^{-1}$) in the wave velocity calculation. This is accounted for through the averaging of multiple (30) measurements, the standard deviation for this range is shown using error bars on figure \ref{fig:result}. Selection of wedge foot offset distance dramatically shifts the calculated velocity. This value is difficult to measure to an accuracy of \textless 1 mm. 
+
+\section{Conclusion}
+
+The results of this study show the potential of a ultrasonic guided wave based temperature monitoring system. The change in $S_0$ wave velocity due to temperature is in line with theoretical predictions over the range 20\si{\degreeCelsius}--100\si{\degreeCelsius}.
+
+It is clear that wedge transducers are not the optimum method of transmitting/receiving a wave through a nozzle guide vane at high temperatures. They cannot be permanently mounted to the structure due to the need for a liquid couplant, and their relatively large footprint would make finding a suitable mounting location a challenge. Their operation at high temperatures is limited by the wedge material, which in the case of acrylic melts at around 160\si{\degreeCelsius}. The wedge material needs to have a longitudinal wave velocity less than that of the targeted Lamb wave phase velocity, which limits the choice of material severely, mostly to plastics with low melting points. The great benefit of wedge transducers is the ability to selectively target Lamb wave modes, which reduces the complexity of data analysis compared with exciting multiple modes simultaneously. This is difficult to achieve using other transducer configurations but it may instead be possible to excite a higher order region that travels as a single wave packet. The use of PWAS transducers could allow for operation at high temperatures (assuming suitable choice of piezoelectric material) and would be relatively easy to mount to an NGV structure, having a small footprint. Another option is to couple into the structure using waveguides, distancing the transducers from the high temperature environment. Future research will investigate the temperature sensitivity of higher order modes (such as $A_1$ and $S_1$), as operating at higher frequencies can improve resolution (allowing for the detection of smaller phase shifts) and response rates. The ability to monitor wave velocity variations in multi-modal wave packets will also be considered when investigating transducer configurations suitable for higher temperature operation.
+
+%\printbibliography
+\bibliography{library, References}
+\end{document}
